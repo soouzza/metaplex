@@ -23,8 +23,8 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          yarn          
-          yarn build
+          yarn --cwd ~/js
+          yarn --cwd ~/js/packages/web build
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
