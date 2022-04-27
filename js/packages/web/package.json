@@ -51,7 +51,7 @@
   "scripts": {
     "prestart": "npm-link-shared ../common/node_modules/ . react",
     "start": "next dev",
-    "build": "next --openssl-legacy-provider build",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && next build",
     "export": "next export -o ../../build/web",
     "start:prod": "next start",
     "test": "jest --passWithNoTests",
