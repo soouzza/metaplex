@@ -14,7 +14,7 @@ jobs:
 
       - uses: actions/cache@v2
         with:
-          path: '**/node_modules'
+          path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install modules
@@ -22,5 +22,5 @@ jobs:
         working-directory: js
 
       - name: Build all packages
-        run: yarn build
+        run: yarn --openssl-legacy-provider build
         working-directory: js
